@@ -1,0 +1,21 @@
+[project]
+name = "rag-accounting-agent"
+version = "0.1.0"
+description = "Smart RAG-based Accounting & Finance Agent with MCP-first architecture"
+requires-python = ">=3.11, <3.14"
+dependencies = [
+    "pydantic>=2.0",
+    "pydantic-settings>=2.0",
+    "qdrant-client>=1.9",
+    "fastembed>=0.6",
+    "groq>=0.9",
+    "pydantic-ai>=0.2",
+    "mcp[cli]>=1.0",
+    "streamlit>=1.35",
+    "python-dotenv>=1.0",
+    "rich>=13.0",
+]
+
+[project.scripts]
+ingest = "scripts.ingest:main"
+mcp-server = "src.server.mcp_server:main"
